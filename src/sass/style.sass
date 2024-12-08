@@ -1,0 +1,583 @@
+@import components/mixin
+*
+    margin: 0
+html
+    font-size: 14px
+    +media(1440) 
+        font-size: 18px
+    +media(1960)
+        font-size: 24px 
+p
+    margin: 0
+a
+    margin: 0
+body
+    font-family: "Rubik" , sans-serif
+    background: #f4f7f9
+header
+    background: url(../img/background.png) no-repeat center/cover
+hr
+    margin: 3.8rem 0
+.container
+    +media(2100)
+        max-width: 1700px
+.navigation
+    a
+        font-size: 0,7rem
+        letter-spacing: 0,05rem
+        text-transform: uppercase
+        color: #fff
+        font-weight: 400
+        
+.btn
+    min-width: 100%
+    position: relative
+    font-style: normal
+    display: block
+    background-color: #ffb700
+    border-radius: 1.7rem
+    text-transform: uppercase
+    color: #fff
+    padding: 0.5rem 1.2rem
+    font-size: 0.8rem
+    letter-spacing: 0.05rem
+    transition: all 0.5s ease
+    z-index: 5
+    &:hover
+        background-color: #0099ff
+        color: #000
+    +media(1024)
+        min-width: 10rem
+        display: inline-block
+.title
+    position: relative
+    color: #ffffff
+    line-height: 1.5em
+    font-weight: 400
+    padding: 2rem 0 0.38rem
+    margin-bottom: 11,5rem
+    h1
+        font-size: 2.7rem
+        letter-spacing: 0.05rem
+        text-transform: uppercase
+        +media(1024)
+            font-size: 4rem
+    p
+        font-size: 0.8rem
+        font-style: italic
+        max-width: 33.3rem
+        margin: 0 auto
+        &:nth-child(2)
+            padding: 1.1rem 0 1.6rem
+    &::after,
+    &::before
+        content: ""
+        position: absolute
+        left: 50%
+        width: 35%
+        border-left: 0.2rem solid rgba(240,240,240,0.1)
+        border-right: 0.2rem solid rgba(240,240,240,0.1)
+        transform: translateX(-50%)
+    &::after
+        bottom: -4.2rem
+        height: 5.5rem
+        border-bottom: 0.2rem solid rgba(240,240,240,0.1)
+    &::before
+        top: 0rem
+        height: 2rem
+        border-top: 0.2rem solid rgba(240,240,240,0.1)
+        // rgba(240,240,240,0.1)
+.choose
+    padding-top: 25.5rem
+    padding-bottom: 2.2rem
+    h2
+        max-width: 19,4rem
+        font-size: 2rem
+        letter-spacing: 0.05rem
+        line-height: 1.2em
+        text-transform: uppercase
+        color: #333333
+        margin: 0.5rem auto
+        font-weight: 400
+    p
+        font-size: 0.8rem
+        line-height: 1.5em
+        color: #333333
+        font-weight: 400
+        font-style: italic
+.plan
+    margin: 0 auto
+    column-gap: 1.1rem
+.info
+    text-align: center
+    margin-right: 0.6rem
+    h2
+        font-size: 2rem
+        letter-spacing: 0.05rem
+        line-height: 1.1em
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+    a
+        margin-bottom: 1.1rem
+    p
+        font-size: 0.8rem
+        line-height: 1.2rem
+        color: #555555
+        font-weight: 400
+        font-style: italic
+    +media(1200)
+        text-align: left
+    .description-info
+        font-size: 0.72rem
+        line-height: 1.4em
+        color: #bbbbbb
+        font-weight: 400
+    .padding-p
+        padding: 1.5rem 0 2.6rem
+.cards
+    row-gap: 1.1rem
+.flag
+    display: inline-block
+    position: absolute
+    border: 45px solid transparent
+    border-top-color: #26cb15
+    top: 0
+    left: 0
+    transform: translate(-50%, -50%) rotate(135deg)
+    z-index: 1
+    &::after
+        content: ""
+        position: absolute
+        width: 17px
+        height: 17px
+        top: -35px
+        left: -8px
+        background: url("/img/starforflag.png")
+        transform: rotate(10deg)
+.bicycle
+    position: relative
+    text-align: center
+    img
+        +media(2100)
+
+.bicycle-svg
+    svg
+        fill: #ffb700
+p.description,
+.left
+    text-align: left
+    font-size: 0.72rem
+    line-height: 1.4em
+    color: #999999
+    font-weight: 400
+.island-excursion,
+.private,
+.bicycle
+    max-width: 15.05rem
+    max-height: 16.16rem
+    transition: all 0.5s ease
+    &:hover
+        background-color: #fff
+.name
+    padding: 1.4rem 0 0.6rem
+.price
+    padding-bottom: 0.72rem
+    font-size: 1.3rem
+    line-height: 1.8em
+    color: #0099ff
+.btn-blue
+    text-align: center
+    display: block
+    font-size: 0.8rem
+    letter-spacing: 0.05rem
+    text-transform: uppercase
+    color: #0099ff
+    font-weight: 400
+    border-radius: 1.27rem
+    text-decoration: none
+    background-color:   transparent
+    border: 0.11rem solid #0099ff
+    padding: 0.55rem 1.22rem
+    transition: all 0.5s ease
+    &:hover
+        background-color: #ffb700
+        border-color: #fff
+        color: #fff
+    +media(1024)
+        display: inline-block
+.buttons
+    row-gap: 0.55rem
+    flex-wrap: wrap
+    p
+        +media(1024)
+                max-width: 160px
+        +media(1440)
+                max-width: 200px
+        +media(2100)
+                max-width: 260px
+.all-planes
+    a
+        position: relative
+        text-decoration: none
+        font-size: 0.66rem
+        letter-spacing: 0rem
+        text-transform: uppercase
+        color: #0099ff
+        font-weight: 400
+        transition: all 0.5s ease
+        &::before
+            content: ""
+            position: absolute
+            width: 0.61rem
+            height: 0.61rem
+            border-radius: 50%
+            border: 0.05rem solid #0099ff
+            top: 0.05rem
+            right: -0.83rem
+            transition: all 0.5s ease
+        &::after
+            content: ""
+            position: absolute
+            width: 0.22rem
+            height: 0.22rem
+            top: 0.27rem
+            right: -0.61rem
+            border-left: 0.05rem solid #0099ff
+            border-top: 0.05rem solid #0099ff
+            transform: rotate(135deg)
+            transition: all 0.5s ease
+        &:hover
+            color: #000
+            &::before,
+            &::after
+                border-color: #000
+.information-private
+    h2
+        font-size: 1.3rem
+        line-height: 1.1em
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+        text-align: center
+        padding-top: 1,11rem
+        +media(1024)
+            padding-top: 0
+            font-size: 2.5rem
+            text-align: left
+.phuket
+        text-align: center
+        font-size: 0.88rem
+        line-height: 1,33rem
+        color: #333333
+        font-weight: 400
+        font-style: italic
+        +media(1024)
+            text-align: left
+.info-tour
+    row-gap: 1.11rem
+.price-per-day
+    background-color: #edf2f5
+.details-bg
+    background: url("../img/comment.png") no-repeat center/cover
+    padding: 5rem 0 5.5rem
+.catch-wave
+    h2
+        margin: 0
+        font-size: 3.11rem
+        letter-spacing: 0.11rem
+        line-height: 1.1em
+        text-transform: uppercase
+        color: #fff
+        font-weight: 400
+        span
+            color: #0099ff
+    p
+        font-size: 0.88rem
+        line-height: 1.5em
+        color: #ffffff
+        font-weight: 400
+        font-family: "PT Sans"
+.comment
+    position: relative
+    padding-bottom: 3.33rem
+    &::before
+        content: ""
+        position: absolute
+        top: 0.16rem
+        left: 0
+        width: 30%
+        height: 100%
+        border-top: 0.22rem solid rgba(240,240,240,0.1)
+        border-left: 0.22rem solid rgba(240,240,240,0.1)
+        border-bottom: 0.22rem solid rgba(240,240,240,0.1)
+    &::after
+        content: ""
+        position: absolute
+        top: 0.16rem
+        right: 0
+        width: 30%
+        height: 100%
+        border-top: 0.22rem solid rgba(240,240,240,0.1)
+        border-right: 0.22rem solid rgba(240,240,240,0.1)
+        border-bottom: 0.22rem solid rgba(240,240,240,0.1)
+.svg-comment
+    position: absolute
+    top: -0.55rem
+    left: 50%
+    transform: translateX(-50%)
+.description-comment
+    position: relative
+    max-width: 27.2rem
+    margin: 0 auto
+    font-size: 0.88rem
+    line-height: 1.38rem
+    color: #ffffff
+    font-weight: 400
+    font-style: italic
+.name-comment
+    font-size: 1rem
+    line-height: 1.44rem
+    color: #ffffff
+    font-weight: 400
+.pozhizny
+    font-size: 0.77rem
+    line-height: 1.05rem
+    color: #999999
+    font-weight: 400
+    text-align: center
+.client
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 50%)
+.spec
+    h2
+        font-size: 2rem
+        line-height: 2.3rem
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+    p
+        font-size: 0.88rem
+        line-height: 1.33rem
+        color: #333333
+        font-weight: 400
+        font-style: italic
+.text-center
+    margin: 0rem
+.specialized
+    gap: 1.11rem
+    +media(1200)
+        gap: 0
+.title-specialized
+    font-size: 1rem
+    line-height: 1.44rem
+    color: #333333
+    font-weight: 400
+.description-specialized
+    font-size: 0.72rem
+    line-height: 1.05rem
+    color: #999999
+    font-weight: 400
+.price-price
+    font-size: 1.33rem
+    line-height: 2.44rem
+    color: #0099ff
+    font-weight: 400
+.price-specialized
+    align-items: center
+.price-btn
+    padding-right: 0.55rem
+    position: relative
+    text-decoration: none
+    font-size: 0.72rem
+    letter-spacing: 0.05rem
+    text-transform: uppercase
+    color: #ffb700
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    transition: all 0.5s ease
+    &::before
+        content: ""
+        position: absolute
+        width: 0.61rem
+        height: 0.61rem
+        border-radius: 50%
+        border: 0.05rem solid #ffb700
+        top: 0.22rem
+        right: 0.94rem
+        transition: all 0.5s ease
+    &::after
+        content: ""
+        position: absolute
+        width: 0.22rem
+        height: 0.22rem
+        top: 0.38rem
+        right: 1.194rem
+        border-left: 0.05rem solid #ffb700
+        border-top: 0.05rem solid #ffb700
+        transform: rotate(135deg)
+        transition: all 0.5s ease
+    &:hover
+        color: #898989
+        &::before,
+        &::after
+            border-color: #898989
+.romantic,
+.biketour,
+.onisland,
+.serfing
+    position: relative
+    max-width: 19.25rem
+    padding: 0
+    transition: all 0.5s ease
+    &:hover
+        background-color: #fff
+    picture
+        display: inline-block
+        position: relative
+        height: 100%
+        img
+            height: 100%
+            +media(2100)
+                width: 360px
+    +media(1440)
+        max-width: 15.05rem
+.bicycle-flag
+    position: absolute
+    top: 0
+    left: 0
+    display: inline-block
+    height: 100%
+    width: 62px
+    background-color: #0099ff
+    &::before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 40px
+        height: 35px
+        display: inline-block
+        background: url("../img/bicycle-flag.png")
+        transform: translate(-50%, -50%)
+        z-index: 1
+.additionally
+    gap: 1.11rem
+.additionally-text
+    width: 100%
+    h2
+        font-size: 2rem
+        letter-spacing: 0.05rem
+        line-height: 1.1em
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+    +media(1200)
+        max-width: 13.16rem
+.grafics
+    max-width: 15.1rem
+    background: url("../img/grafics.png") no-repeat center/cover
+.grafic-work
+    font-size: 1rem
+    line-height: 1.3em
+    color: #ffffff
+    font-weight: 400
+.file
+    font-size: 0.72rem
+    line-height: 1.05rem
+    color: #bbbbbb
+    font-weight: 400
+.description-additionally
+    font-size: 0.72rem
+    line-height: 1.05rem
+    color: #fefefe
+    font-weight: 400
+.btn-additionally
+    padding: 0.38rem 1rem
+    text-decoration: none
+    font-size: 0.66rem
+    letter-spacing: 0rem
+    text-transform: uppercase
+    color: #ffb700
+    font-weight: 400
+    border: 0.11rem solid #ffb700
+    border-radius: 0.88rem
+    transition: all 0.5s ease
+    &:hover
+        background: #0099ff
+.files
+    padding-top: 1.44rem
+.btn-plus-svg
+    position: relative
+.infofood
+    max-width: 15.1rem
+    background: url("../img/infooffood.png") no-repeat center/cover
+.makeask
+    position: relative
+    padding-bottom: 3.3rem
+    max-width: 14.4rem
+    +media(1200)
+        max-width: none
+    &::before
+        content: ""
+        position: absolute
+        top: 0.55rem
+        left: -0.83rem
+        width: 2.6rem
+        height: 95%
+        border-top: 0.22rem solid #ffb700
+        border-left: 0.22rem solid #ffb700
+        border-bottom: 0.22rem solid #ffb700
+        +media(1200)
+            left: 0.83rem
+    &::after
+        content: ""
+        position: absolute
+        top: 0.5rem
+        right: -0.83rem
+        width: 2.6rem
+        height: 95%
+        border-top: 0.22rem solid #ffb700
+        border-right: 0.22rem solid #ffb700
+        border-bottom: 0.22rem solid #ffb700
+        +media(1200)
+            right: 0.83rem
+.makequstion
+    font-size: 1rem
+    letter-spacing: 0.05rem
+    line-height: 1.4em
+    color: #333333
+    font-weight: 400
+.instruction
+    font-size: 0.72rem
+    line-height: 1.2em
+    color: #999999
+    font-weight: 400
+.number
+    font-size: 1rem
+    line-height: 1.4em
+    color: #0099ff
+    font-weight: 400
+.name-makeask   
+    font-size: 1rem
+    line-height: 1,4em
+    color: #333333
+    font-weight: 400
+.consult
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 50%)
+.footer
+    height: 60vh
+    width: 100%
+    background: url("../img/footer-img.png") no-repeat center/cover
+.copy-right
+    background-color: #1a1a1a
+    font-size: 0.72rem
+    line-height: 1.4em
+    color: #ffffff
+    font-weight: 400

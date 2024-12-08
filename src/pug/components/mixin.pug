@@ -1,0 +1,99 @@
+-
+    let cardsFirst = {
+        velotour:{
+            flag: false,
+            img: "img/velotour.png",
+            alt: "",
+            name: "Тур на велосипедах",
+            price: 335,
+            curency: "грн*",
+            description: "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.",
+        },
+        excursion:{
+            flag: true,
+            img: "img/excursion.png",
+            alt: "",
+            name: "Екскурсія на острів",
+            price: 500,
+            curency: "грн*",
+            description: "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .",
+        },
+        special:{
+            flag: true,
+            img: "img/private.png",
+            alt: "",
+            name: "Особливе замовлення",
+            price: 250,
+            curency: "грн*",
+            description: "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші. ",
+        }
+    }
+
+mixin cards(cardsInfo)
+    figure.bicycle.col-12.col-md-4.text-center.p-4
+        figcaption
+            p(class= (cardsInfo.flag) ? "flag": "")
+            a(href="#").bicycle-svg
+            picture
+                img(src=cardsInfo.img, alt=cardsFirst.alt)
+            p.name #{cardsInfo.name}
+            p.price #{cardsInfo.price}
+                span.curency #{cardsInfo.curency}
+            p.desctiption.left.text-left #{cardsInfo.description}
+-
+    let cardsSecond = {
+        romantics:{
+            flag: true,
+            bicycle: false,
+            img: "img/romantics.png",
+            alt: "",
+            name: "Романтична подорож на 2",
+            price: 2599,
+            curency: "грн.",
+            description: "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші. ",
+        },
+        biketour:{
+            flag: true,
+            bicycle: true,
+            img: "img/enduro.png",
+            alt: "",
+            name: "Велотур",
+            price: 555,
+            curency: "грн.",
+            description: "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
+        },
+        onisland:{
+            flag: true,
+            bicycle: false,
+            img: "img/islands.png",
+            alt: "",
+            name: "На острови!",
+            price: 1559,
+            curency: "грн.",
+            description: "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
+        },
+        serfing:{
+            flag: true,
+            bicycle: false,
+            img: "img/serfing.png",
+            alt: "",
+            name: "Катання на сьорфінгу",
+            price: 999,
+            curency: "грн",
+            description: "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
+        }
+    }
+    
+mixin cardsSecond(cardsInfoSecond) 
+    figure.serfing.col-xl-3.col-sm-12
+        figcaption
+            p(class=(cardsInfoSecond.flag) ? "flag": "")
+            picture
+                img(src=cardsInfoSecond.img, alt=cardsFirst.alt)
+                span(class=(cardsInfoSecond.bicycle) ? "bicycle-flag": "")
+            p.title-specialized.px-3.py-2 #{cardsInfoSecond.name}
+            p.description-specialized.px-3.py-2 #{cardsInfoSecond.description}
+            .row.price-specialized.d-flex.px-3.py-2
+                p.price-price.col-5 #{cardsInfoSecond.price}
+                    span.curency #{cardsInfoSecond.curency}
+                a(href="#").price-btn.col-7 замовити
