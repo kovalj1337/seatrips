@@ -2,7 +2,8 @@
     let cardsFirst = {
         velotour:{
             flag: false,
-            img: "img/velotour.png",
+            source: "img/velotour.jpg",
+            img: "img/velotour.webp",
             alt: "",
             name: "Тур на велосипедах",
             price: 335,
@@ -11,7 +12,8 @@
         },
         excursion:{
             flag: true,
-            img: "img/excursion.png",
+            source: "img/excursion.jpg",
+            img: "img/excursion.webp",
             alt: "",
             name: "Екскурсія на острів",
             price: 500,
@@ -20,7 +22,8 @@
         },
         special:{
             flag: true,
-            img: "img/private.png",
+            source: "img/private.jpg",
+            img: "img/private.webp",
             alt: "",
             name: "Особливе замовлення",
             price: 250,
@@ -35,6 +38,7 @@ mixin cards(cardsInfo)
             p(class= (cardsInfo.flag) ? "flag": "")
             a(href="#").bicycle-svg
             picture
+                source(srcset=cardsInfo.source)
                 img(src=cardsInfo.img, alt=cardsFirst.alt)
             p.name #{cardsInfo.name}
             p.price #{cardsInfo.price}
@@ -45,7 +49,8 @@ mixin cards(cardsInfo)
         romantics:{
             flag: true,
             bicycle: false,
-            img: "img/romantics.png",
+            source: "img/romantics.jpg",
+            img: "img/romantics.webp",
             alt: "",
             name: "Романтична подорож на 2",
             price: 2599,
@@ -55,7 +60,8 @@ mixin cards(cardsInfo)
         biketour:{
             flag: true,
             bicycle: true,
-            img: "img/enduro.png",
+            source: "img/enduro.jpg",
+            img: "img/enduro.webp",
             alt: "",
             name: "Велотур",
             price: 555,
@@ -65,7 +71,8 @@ mixin cards(cardsInfo)
         onisland:{
             flag: true,
             bicycle: false,
-            img: "img/islands.png",
+            source: "img/islands.jpg",
+            img: "img/islands.webp",
             alt: "",
             name: "На острови!",
             price: 1559,
@@ -75,7 +82,8 @@ mixin cards(cardsInfo)
         serfing:{
             flag: true,
             bicycle: false,
-            img: "img/serfing.png",
+            source: "img/serfing.jpg",
+            img: "img/serfing.webp",
             alt: "",
             name: "Катання на сьорфінгу",
             price: 999,
@@ -89,11 +97,12 @@ mixin cardsSecond(cardsInfoSecond)
         figcaption
             p(class=(cardsInfoSecond.flag) ? "flag": "")
             picture
+                source(srcset=cardsInfoSecond.source)
                 img(src=cardsInfoSecond.img, alt=cardsFirst.alt)
                 span(class=(cardsInfoSecond.bicycle) ? "bicycle-flag": "")
             p.title-specialized.px-3.py-2 #{cardsInfoSecond.name}
-            p.description-specialized.px-3.py-2 #{cardsInfoSecond.description}
-            .row.price-specialized.d-flex.px-3.py-2
+            p.description-specialized.px-3.py-1 #{cardsInfoSecond.description}
+            .row.price-specialized.d-flex.px-3.pb-2
                 p.price-price.col-5 #{cardsInfoSecond.price}
                     span.curency #{cardsInfoSecond.curency}
                 a(href="#").price-btn.col-7 замовити

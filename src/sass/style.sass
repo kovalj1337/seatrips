@@ -2,7 +2,7 @@
 *
     margin: 0
 html
-    font-size: 14px
+    font-size: 16px
     +media(1440) 
         font-size: 18px
     +media(1960)
@@ -38,7 +38,7 @@ hr
     border-radius: 1.7rem
     text-transform: uppercase
     color: #fff
-    padding: 0.5rem 1.2rem
+    padding: 0.3rem 1.2rem
     font-size: 0.8rem
     letter-spacing: 0.05rem
     transition: all 0.5s ease
@@ -75,23 +75,23 @@ hr
         position: absolute
         left: 50%
         width: 35%
-        border-left: 0.2rem solid rgba(240,240,240,0.1)
-        border-right: 0.2rem solid rgba(240,240,240,0.1)
+        border-left: 0.2rem solid rgba(240,240,240,0.2)
+        border-right: 0.2rem solid rgba(240,240,240,0.2)
         transform: translateX(-50%)
     &::after
         bottom: -4.2rem
         height: 5.5rem
-        border-bottom: 0.2rem solid rgba(240,240,240,0.1)
+        border-bottom: 0.2rem solid rgba(240,240,240,0.2)
     &::before
         top: 0rem
         height: 2rem
-        border-top: 0.2rem solid rgba(240,240,240,0.1)
+        border-top: 0.2rem solid rgba(240,240,240,0.2)
         // rgba(240,240,240,0.1)
 .choose
     padding-top: 25.5rem
     padding-bottom: 2.2rem
     h2
-        max-width: 19,4rem
+        max-width: 18.4rem
         font-size: 2rem
         letter-spacing: 0.05rem
         line-height: 1.2em
@@ -198,7 +198,7 @@ p.description,
     text-decoration: none
     background-color:   transparent
     border: 0.11rem solid #0099ff
-    padding: 0.55rem 1.22rem
+    padding: 0.3rem 1.2rem
     transition: all 0.5s ease
     &:hover
         background-color: #ffb700
@@ -211,9 +211,9 @@ p.description,
     flex-wrap: wrap
     p
         +media(1024)
-                max-width: 160px
+                max-width: 180px
         +media(1440)
-                max-width: 200px
+                max-width: 220px
         +media(2100)
                 max-width: 260px
 .all-planes
@@ -281,6 +281,8 @@ p.description,
 .details-bg
     background: url("../img/comment.png") no-repeat center/cover
     padding: 5rem 0 5.5rem
+.btn-no-people
+    padding: 0.62rem 2.25rem
 .catch-wave
     h2
         margin: 0
@@ -308,9 +310,9 @@ p.description,
         left: 0
         width: 30%
         height: 100%
-        border-top: 0.22rem solid rgba(240,240,240,0.1)
-        border-left: 0.22rem solid rgba(240,240,240,0.1)
-        border-bottom: 0.22rem solid rgba(240,240,240,0.1)
+        border-top: 0.22rem solid rgba(240,240,240,0.2)
+        border-left: 0.22rem solid rgba(240,240,240,0.2)
+        border-bottom: 0.22rem solid rgba(240,240,240,0.2)
     &::after
         content: ""
         position: absolute
@@ -318,9 +320,9 @@ p.description,
         right: 0
         width: 30%
         height: 100%
-        border-top: 0.22rem solid rgba(240,240,240,0.1)
-        border-right: 0.22rem solid rgba(240,240,240,0.1)
-        border-bottom: 0.22rem solid rgba(240,240,240,0.1)
+        border-top: 0.22rem solid rgba(240,240,240,0.2)
+        border-right: 0.22rem solid rgba(240,240,240,0.2)
+        border-bottom: 0.22rem solid rgba(240,240,240,0.2)
 .svg-comment
     position: absolute
     top: -0.55rem
@@ -429,8 +431,9 @@ p.description,
 .biketour,
 .onisland,
 .serfing
+    height: 334px
     position: relative
-    max-width: 19.25rem
+    max-width: 16.9rem
     padding: 0
     transition: all 0.5s ease
     &:hover
@@ -475,8 +478,10 @@ p.description,
         text-transform: uppercase
         color: #333333
         font-weight: 400
+        text-align: center
     +media(1200)
         max-width: 13.16rem
+        text-align: left
 .grafics
     max-width: 15.1rem
     background: url("../img/grafics.png") no-repeat center/cover
@@ -557,10 +562,18 @@ p.description,
     color: #999999
     font-weight: 400
 .number
+    position: relative
     font-size: 1rem
     line-height: 1.4em
     color: #0099ff
     font-weight: 400
+    svg
+        position: absolute
+        top: 3px
+        left: 13px
+        +media(1200)
+            top: 3px
+            left: 40px
 .name-makeask   
     font-size: 1rem
     line-height: 1,4em
