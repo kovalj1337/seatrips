@@ -2,7 +2,8 @@
     let cardsFirst = {
         velotour:{
             flag: false,
-            source: "img/velotour.jpg",
+            seeallplanes: false,
+            source: "img/velotour.png",
             img: "img/velotour.webp",
             alt: "",
             name: "Тур на велосипедах",
@@ -12,7 +13,8 @@
         },
         excursion:{
             flag: true,
-            source: "img/excursion.jpg",
+            seeallplanes: true,
+            source: "img/excursion.png",
             img: "img/excursion.webp",
             alt: "",
             name: "Екскурсія на острів",
@@ -22,7 +24,8 @@
         },
         special:{
             flag: true,
-            source: "img/private.jpg",
+            seeallplanes: false,
+            source: "img/private.png",
             img: "img/private.webp",
             alt: "",
             name: "Особливе замовлення",
@@ -33,17 +36,20 @@
     }
 
 mixin cards(cardsInfo)
-    figure.bicycle.col-12.col-md-4.text-center.p-4
-        figcaption
-            p(class= (cardsInfo.flag) ? "flag": "")
-            a(href="#").bicycle-svg
-            picture
-                source(srcset=cardsInfo.source)
-                img(src=cardsInfo.img, alt=cardsFirst.alt)
-            p.name #{cardsInfo.name}
-            p.price #{cardsInfo.price}
-                span.curency #{cardsInfo.curency}
-            p.desctiption.left.text-left #{cardsInfo.description}
+    .card-poslugi.col-12.col-md-4
+        figure.bicycle.text-center.p-4
+            figcaption
+                p(class= (cardsInfo.flag) ? "flag": "")
+                a(href="#").bicycle-svg
+                picture
+                    source(srcset=cardsInfo.source)
+                    img(src=cardsInfo.img, alt=cardsFirst.alt)
+                p.name #{cardsInfo.name}
+                p.price #{cardsInfo.price}
+                    span.curency #{cardsInfo.curency}
+                p.desctiption.left.text-left #{cardsInfo.description}
+        .text-center.pt-3
+            a(href="#" class = (cardsInfo.seeallplanes) ? "all-planes": "see-all-planes-disable") дивитись усі плани 
 -
     let cardsSecond = {
         romantics:{
