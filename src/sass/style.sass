@@ -94,8 +94,10 @@ hr
             border-top: 0.2rem solid rgba(240,240,240,0.2)
         // rgba(240,240,240,0.1)
 .choose
-    padding-top: 25.5rem
+    padding-top: 11.5rem
     padding-bottom: 2.2rem
+    +media(1900)
+        padding-top: 22.5rem
     h2
         max-width: 18.4rem
         font-size: 2rem
@@ -143,6 +145,10 @@ hr
         padding: 1.5rem 0 2.6rem
 .cards
     row-gap: 1.1rem
+.card-poslugi
+    max-width: 250px
+    +media(1440)
+        max-width: none
 .flag
     display: inline-block
     position: absolute
@@ -166,7 +172,8 @@ hr
     text-align: center
     img
         +media(2100)
-
+    &:hover
+        background-color: #fff
 .bicycle-svg
     svg
         fill: #ffb700
@@ -183,8 +190,6 @@ p.description,
     max-width: 15.05rem
     max-height: 16.16rem
     transition: all 0.5s ease
-    &:hover
-        background-color: #fff
 .name
     padding: 1.4rem 0 0.6rem
 .price
@@ -390,6 +395,7 @@ p.description,
     color: #333333
     font-weight: 400
 .description-specialized
+    max-width: 250px
     font-size: 0.72rem
     line-height: 1.05rem
     color: #999999
